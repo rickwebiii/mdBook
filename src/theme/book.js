@@ -134,7 +134,8 @@ function playground_text(playground) {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(params)
-        })
+        },
+        20000)
         .then(response => response.json())
         .then(response => {
             if (response.result.trim() === '') {
